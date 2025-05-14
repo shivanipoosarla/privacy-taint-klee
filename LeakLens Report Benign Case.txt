@@ -1,0 +1,14 @@
+LeakLens Report: Benign Case
+
+Input Source: input (tainted)
+Sink: none
+
+ Summary
+Tainted input input was used internally but never leaked to any untrusted sink.
+
+ Input
+- input: 61626300 (hex for "abc\0")
+
+ Taint Flow
+
+input -> strlen (safe usage)

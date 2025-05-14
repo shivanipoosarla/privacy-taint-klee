@@ -1,0 +1,14 @@
+LeakLens Report: Direct Leak
+
+Input Source: secret (tainted)
+Sink: printf()
+
+ Summary
+Tainted variable secret was directly passed to printf, resulting in a direct leak.
+
+ Input
+- secret: 736563 (hex for "sec")
+
+ Taint Flow (simplified)
+
+secret -> printf

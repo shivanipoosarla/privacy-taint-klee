@@ -1,0 +1,14 @@
+LeakLens Report: Indirect Leak
+
+Input Source: flag (tainted)
+Sink: printf()
+
+ Summary
+Control flow was influenced by tainted input flag. The path selected caused printf to emit a different output.
+
+ Input
+- flag: 59 (hex for 'Y')
+
+ Taint Flow
+
+flag -> if-condition -> printf
